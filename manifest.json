@@ -1,0 +1,20 @@
+{
+  "name": "What's New in V2EX?",
+  "manifest_version": 2,
+  "version": "0.2",
+  "description": "Show new topics in V2EX.",
+  "browser_action":{
+    "default_icon": "icon.png"
+  },
+  "content_scripts":[{
+      "matches": ["http://v2ex.com/api/*"],
+      "js":["javascript/jquery-2.1.0.min.js", "javascript/background.js"]
+    }],
+  "permissions": [
+    "tabs",
+    "http://v2ex.com/api/*"
+  ],
+  "background":{
+    "scripts": ["javascript/background.js", "javascript/jquery-2.1.0.min.js"]
+  }
+}
